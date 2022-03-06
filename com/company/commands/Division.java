@@ -16,8 +16,9 @@ public class Division extends CommandsClass {
         final Integer FOR_OPERATION_VARIABLES=2;
         if (stack.size() >= FOR_OPERATION_VARIABLES) {
             Double numerator = stack.pop();
-            final Double ZERO_FOR_DIVISION=0.0;
-            if (stack.peek() == ZERO_FOR_DIVISION) {
+            final Double ZERO_FOR_DIVISION_P=0.0;
+            final Double ZERO_FOR_DIVISION_M=-0.0;
+            if (stack.peek().equals(ZERO_FOR_DIVISION_P) || stack.peek().equals(ZERO_FOR_DIVISION_M)) {
                 stack.push(numerator);
 
                 final String ERROR="Error " + return_command_name() +

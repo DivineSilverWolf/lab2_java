@@ -24,14 +24,14 @@ public class TestCommands {
     public void test_command_Division() throws  Exception{
         CommandsClass division_command=new Division("DIVISION");
         Stack stack=new Stack();
-        stack.push(0.0);
+        stack.push(-0.0);
         stack.push(2.0);
         stack.push(6.0);
         division_command.command(stack);
         division_command.command(stack);
 
         Stack expected=new Stack();
-        expected.push(0.0);
+        expected.push(-0.0);
         expected.push(3.0);
 
         System.out.println(division_command.return_command_name()+" TEST");
@@ -132,10 +132,13 @@ public class TestCommands {
         sqrt_command.command(stack);
         stack.push(-1.0);
         sqrt_command.command(stack);
+        stack.push(-0.0);
+        sqrt_command.command(stack);
 
         Stack expected=new Stack();
         expected.push(2.0);
         expected.push(-1.0);
+        expected.push(-0.0);
 
         System.out.println(sqrt_command.return_command_name()+" TEST");
         Assert.assertEquals(expected,stack);
