@@ -1,0 +1,9 @@
++ calculator.commands.Plus
+- calculator.commands.Minus
+* calculator.commands.Multiplication
+DEFINE calculator.commands.Define
+POP calculator.commands.Pop
+PRINT calculator.commands.Print
+PUSH calculator.commands.Push
+SQRT calculator.commands.Sqrt
+DIVISION calculator.commands.Division
